@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/double_spacing"
+        android:layout_marginRight="@dimen/double_spacing"
+        android:layout_marginLeft="@dimen/double_spacing"
+        android:hint="@string/name_hint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/et_company"
+        />
+    <EditText
+        android:id="@+id/et_company"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing"
+        android:hint="@string/company_hint"
+        app:layout_constraintStart_toStartOf="@id/et_name"
+        app:layout_constraintEnd_toEndOf="@id/et_name"
+        app:layout_constraintTop_toBottomOf="@id/et_name"
+        app:layout_constraintBottom_toTopOf="@id/btn_submit"
+
+        />
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:layout_marginTop="@dimen/spacing"
+        app:layout_constraintStart_toStartOf="@id/et_name"
+        app:layout_constraintEnd_toEndOf="@id/et_name"
+        app:layout_constraintTop_toBottomOf="@id/et_company"
+        app:layout_constraintBottom_toTopOf="@id/rv_employees"
+        />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_employees"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/double_spacing"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="@id/et_name"
+        app:layout_constraintEnd_toEndOf="@id/et_name"
+        app:layout_constraintTop_toBottomOf="@id/btn_submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

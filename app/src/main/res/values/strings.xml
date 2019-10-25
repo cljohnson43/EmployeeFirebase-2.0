@@ -1,0 +1,9 @@
+<resources>
+    <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
+    <string name="facebook_application_id" translatable="false">693974227760429</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fbYOUR_APP_ID</string>
+    <string name="app_name">EmployeeFirebase</string>
+    <string name="submit">Submit</string>
+    <string name="company_hint">Company Name</string>
+    <string name="name_hint">Employee Name</string>
+</resources>
